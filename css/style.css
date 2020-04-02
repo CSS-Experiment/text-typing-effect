@@ -1,0 +1,51 @@
+
+*{
+	margin: 0;
+	padding: 0;
+	outline: none;
+}
+body{
+	
+}
+
+.typing-effect{
+	font-family: sans-serif;
+	text-transform: uppercase;
+	font-size: 25px;
+	letter-spacing: 5px;
+	color: #fff;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	margin: 0;
+	padding: 0;
+}
+.typing-effect:before{
+	content: attr(data-text);
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	color: #000;
+	overflow: hidden;
+	animation: taype 15s linear infinite;
+	border-right: 2px solid #000;
+	white-space: nowrap;
+}
+
+@keyframes taype
+{
+	0%
+	{
+		width: 0;
+	}
+	50%
+	{
+		width: 100%;
+	}
+	100%{
+		width: 0;
+	}
+}
